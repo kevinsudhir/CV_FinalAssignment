@@ -34,7 +34,7 @@ maskbg(l_values) = 1;
 final_mask(l_values) = lindex;
 lindex = lindex+1;
 
-% Outer ring 3D mask creation and updating it to final mask
+% Outer ring 3D mask creation
 out_mask = image;
 outvals = fill_imask == 1;
 out_mask(outvals) = 0;
@@ -62,7 +62,7 @@ in_maskvals = in_rmask == 1;
 final_mask(in_maskvals)=lindex;
 lindex = lindex+1;
 
-% Creating mask for inner components in 3D
+% Creating masks for inner components in 3D
 f = strel('disk', 8);
 in_imask = image;
 invals = imdilate(fill_imask, f)==0;

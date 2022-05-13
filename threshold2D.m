@@ -50,7 +50,7 @@ for i=1:10
     final_mask(l_values)=lindex;
     lindex=lindex+1;
     
-    % Outer ring mask creation and updating it to final mask
+    % Outer ring mask creation
     out_imask = image;
     outval = fill_imask == 1;
     out_imask(outval) = 0;
@@ -84,7 +84,7 @@ for i=1:10
     caption = sprintf('Mask 2');
     title(caption, 'FontSize', 8);
    
-    % Creating mask for inner components
+    % Creating masks for inner components
     f = strel('disk', 8);
     in_imask = image;
     in_vals = imerode(fill_imask == 0, f);
