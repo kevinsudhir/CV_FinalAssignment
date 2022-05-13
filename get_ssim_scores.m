@@ -1,4 +1,4 @@
-% Function to calcute ssim scores (Structural Similatiry)
+% Function to calculate ssim scores (Structural Similarity)
 function values=get_ssim_scores(grount_truth, l)
     values = zeros(6,1,'double');
     for i=0:5
